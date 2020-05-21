@@ -4,25 +4,62 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/latitude"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="unknown"
-        android:textSize="20dip" />
+        android:orientation="vertical"
+        android:gravity="center">
 
-    <TextView
-        android:id="@+id/longitude"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="unknown"
-        android:textSize="20dip" />
+        <Button
+            android:id="@+id/get_current_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get Location"
+            android:layout_margin="10dp"/>
 
-    <Button
-        android:id="@+id/get_current_location"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Get Location" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Latitude: "
+            android:textSize="20dip"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:id="@+id/latitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="unknown"
+            android:textSize="20dip"
+            android:layout_margin="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Longitude"
+            android:textSize="20dip"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:id="@+id/longitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="unknown"
+            android:textSize="20dip"
+            android:layout_margin="10dp"/>
+
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/customRecyclerView"
