@@ -2,25 +2,23 @@ package com.example.iss;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.util.Date;
-
 public class PassOver {
 
     @SerializedName("risetime")
-    private Date riseTime;
+    private long riseTime;
     @SerializedName("duration")
     private int duration;
 
-    public PassOver(Date riseTime, int duration) {
+    public PassOver(int riseTime, int duration) {
         this.riseTime = riseTime;
         this.duration = duration;
     }
 
-    public Date getRiseTime() {
+    public long getRiseTime() {
         return riseTime;
     }
 
-    public void setRiseTime(Date riseTime) {
+    public void setRiseTime(long riseTime) {
         this.riseTime = riseTime;
     }
 

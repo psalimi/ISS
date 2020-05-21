@@ -15,9 +15,9 @@ public class Request {
     @SerializedName("passes")
     private int passes;
     @SerializedName("datetime")
-    private Date datetime;
+    private int datetime;
 
-    public Request(double latitude, double longitude, double altitude, int passes, Date datetime) {
+    public Request(double latitude, double longitude, double altitude, int passes, int datetime) {
         this.latitude = latitude;
         this.longitude = longitude;
         this.altitude = altitude;
@@ -57,11 +57,11 @@ public class Request {
         this.passes = passes;
     }
 
-    public Date getDatetime() {
+    public int getDatetime() {
         return datetime;
     }
 
-    public void setDatetime(Date datetime) {
+    public void setDatetime(int datetime) {
         this.datetime = datetime;
     }
 }

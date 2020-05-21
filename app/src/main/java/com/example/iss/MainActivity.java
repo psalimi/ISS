@@ -147,7 +147,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener,
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        mAdapter = new CustomAdapter(times);
+        mAdapter = new CustomAdapter(this, times);
         recyclerView.setAdapter(mAdapter);
     }
 }

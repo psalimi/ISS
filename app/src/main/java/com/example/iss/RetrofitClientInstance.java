@@ -3,9 +3,6 @@ package com.example.iss;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
@@ -31,11 +28,7 @@ public class RetrofitClientInstance {
                 .connectTimeout(60, TimeUnit.SECONDS)
                 .addInterceptor(interceptor).build();
 
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
-        formatter.setTimeZone(TimeZone.getTimeZone("ETS"));
-        Gson gson = new GsonBuilder()
-                .registerTypeAdapter(Date.class, new DateDeserializer())
-                .create();
+        Gson gson = new GsonBuilder().create();
 
         if (retrofit == null) {
             retrofit = new retrofit2.Retrofit.Builder()
